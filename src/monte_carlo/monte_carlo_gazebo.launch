@@ -1,0 +1,30 @@
+<launch>
+    <arg
+        name="map_file"
+        default="$(find monte_carlo)/maps/map.yaml"
+    />
+    <!-- Run the map server -->
+    <node
+        name="map_server"
+        pkg="map_server"
+        type="map_server"
+        args="$(arg map_file)"
+    />
+    <node
+        name="monte_carlo"
+        pkg="monte_carlo"
+        type="monte_carlo_ex"
+        output="screen"
+    />
+    <node
+        name="controller"
+        pkg="monte_carlo"
+        type="controller"
+        output="screen"
+    />
+
+    <include file="$(find turtlebot3_gazebo)/launch/turtlebot3_house.launch">
+
+    </include>
+
+</launch>
