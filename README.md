@@ -6,8 +6,7 @@
 
 ### Prerequisite:
 1. cd monte_carlo/src
-2. git clone
-3. git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
+2. git clone -b noetic-devel https://github.com/ROBOTIS-GIT/turtlebot3_simulations.git
 ### Run:
 1. cd monte_carlo/
 2. catkin_make
